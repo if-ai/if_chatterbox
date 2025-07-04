@@ -8,8 +8,8 @@
 # versions >3.10, try upgrading packaging tools again or recreate your virtual
 # environment.
 
-s3tokenizer>=0.1.7
-resemble-perth
+s3tokenizer
+resemble-perth #(python3.12 might be conflicts)
 librosa
 scipy
 omegaconf
