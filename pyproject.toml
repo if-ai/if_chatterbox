@@ -1,0 +1,13 @@
+[project]
+name = "comfyui-chatterbox"
+description = "Wrapper for 'resemble-ai/chatterbox'"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["librosa", "omegaconf", "conformer", "diffusers"]
+
+[project.urls]
+Repository = "https://github.com/sm079/comfyui-chatterbox"
+
+[tool.comfy]
+PublisherId = "sm079"
+DisplayName = "comfyui-chatterbox"
