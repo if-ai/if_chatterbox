@@ -7,7 +7,7 @@
 # If installation of any dependency (notably `s3tokenizer`) fails on Python
 # versions >3.10, try upgrading packaging tools again or recreate your virtual
 # environment.
-
+diffusers
 s3tokenizer
 resemble-perth #(python3.12 might be conflicts)
 librosa
