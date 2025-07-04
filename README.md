@@ -4,7 +4,7 @@ This repository provides a ComfyUI wrapper for the [Chatterbox TTS model by Rese
 
 Try a live demo on [Hugging Face Spaces](https://huggingface.co/spaces/ResembleAI/Chatterbox)!
 
-![Screenshot of Chatterbox nodes in ComfyUI](assets/img.png)
+![Screenshot of Chatterbox nodes in ComfyUI](assets/workflow.png)
 
 ## Installation
 
