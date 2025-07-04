@@ -1,9 +1,5 @@
 # if_chatterbox for ComfyUI
 
-This repository provides a ComfyUI wrapper for the [Chatterbox TTS model by Resemble AI](https://huggingface.co/ResembleAI/chatterbox).
-
-Try a live demo on [Hugging Face Spaces](https://huggingface.co/spaces/ResembleAI/Chatterbox)!
-
 ![Screenshot of Chatterbox nodes in ComfyUI](assets/workflow.png)
 
 ## Installation
