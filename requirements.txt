@@ -1,4 +1,10 @@
+numpy
+resampy
 librosa
+s3tokenizer
+transformers
+diffusers
 omegaconf
 conformer
-diffusers
+safetensors
+# resemble-perth
