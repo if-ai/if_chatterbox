@@ -1,10 +1,27 @@
-numpy
-resampy
+# --- IMPORTANT: TROUBLESHOOTING INSTALLATION ---
+# Ensure your environment has the latest packaging tools:
+#     python -m pip install --upgrade pip setuptools wheel
+# Then install these requirements with:
+#     pip install -r requirements.txt
+#
+# If installation of any dependency (notably `s3tokenizer`) fails on Python
+# versions >3.10, try upgrading packaging tools again or recreate your virtual
+# environment.
+
+s3tokenizer>=0.1.7
+resemble-perth
 librosa
-s3tokenizer
-transformers
-diffusers
+scipy
 omegaconf
-conformer
-safetensors
-# resemble-perth
+accelerate
+transformers>=4.46.3
+conformer>=0.3.2
+torchaudio
+numpy
+einops
+phonemizer
+g2p-en
+unidecode
+soundfile
+resampy
+numba
