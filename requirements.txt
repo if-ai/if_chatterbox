@@ -9,13 +9,13 @@
 # environment.
 diffusers
 resemble-perth #(python3.12 might be conflicts)
-s3tokenizer==0.1.7
+s3tokenizer>=0.1.7
 resemble-perth
 librosa
 scipy
 omegaconf
 accelerate
-transformers==4.46.3
+transformers>=4.46.3
 conformer>=0.3.2
 torchaudio
 numpy
@@ -26,3 +26,4 @@ unidecode
 soundfile
 resampy
 numba
+
