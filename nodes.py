@@ -3,8 +3,21 @@ import random
 import numpy as np
 import logging
 
-from .tts import ChatterboxTTS
-from .vc import ChatterboxVC
+try:
+    from .tts import ChatterboxTTS
+    TTS_AVAILABLE = True
+except ImportError as e:
+    print(f"Warning: ChatterboxTTS not available: {e}")
+    ChatterboxTTS = None
+    TTS_AVAILABLE = False
+
+try:
+    from .vc import ChatterboxVC
+    VC_AVAILABLE = True
+except ImportError as e:
+    print(f"Warning: ChatterboxVC not available: {e}")
+    ChatterboxVC = None
+    VC_AVAILABLE = False
 from comfy.utils import ProgressBar
 
 # Configure basic logging
@@ -196,15 +209,16 @@ class Chatterbox_VC:
         return (audio_out, message)
 
 
-NODE_CLASS_MAPPINGS = {
-    "Chatterbox_TTS" : Chatterbox_TTS,
-    "Chatterbox_VC" : Chatterbox_VC,
-}
+NODE_CLASS_MAPPINGS = {}
+NODE_DISPLAY_NAME_MAPPINGS = {}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "Chatterbox_TTS": "Chatterbox TTS",
-    "Chatterbox_VC": "Chatterbox VC",
-}
+if TTS_AVAILABLE and ChatterboxTTS is not None:
+    NODE_CLASS_MAPPINGS["Chatterbox_TTS"] = Chatterbox_TTS
+    NODE_DISPLAY_NAME_MAPPINGS["Chatterbox_TTS"] = "Chatterbox TTS"
+
+if VC_AVAILABLE and ChatterboxVC is not None:
+    NODE_CLASS_MAPPINGS["Chatterbox_VC"] = Chatterbox_VC
+    NODE_DISPLAY_NAME_MAPPINGS["Chatterbox_VC"] = "Chatterbox VC"
 
 # -----------------------------------------------------------------------------
 # Utility: split long texts into sentence-aware chunks

@@ -38,7 +38,10 @@ for public_name, internal_path in _ALIAS_MAP.items():
     try:
         real_mod = importlib.import_module(internal_path)
         sys.modules[public_name] = real_mod
-    except ModuleNotFoundError:
+    except (ModuleNotFoundError, ImportError) as e:
+        # Keep the proxy module even if import fails due to dependency issues
+        sys.modules[public_name] = module_proxy
+        print(f"Warning: Failed to import {internal_path}: {e}")
         pass
 
 # -----------------------------------------------------------------------------
